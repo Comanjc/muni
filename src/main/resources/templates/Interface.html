@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Interface Municipalidad de Chaclacayo</title>
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+        <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet"/>
+        <link th:href="@{/css/estilos.css}" rel="stylesheet" />
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    </head> 
+    <body >
+
+        <header class="p-3  text-white " style="background-color: #0B5804;">
+            <div class="container">
+                <div class="container"> <img th:src="@{/img/chanclacayo.png}" width="50"class="position-absolute me-4"style="margin-left:-8rem; margin-top:-0.3rem ;">
+                    <img th:src="@{/img/letras.png}"  style="margin-left: -4rem    ; margin-bottom:-1.5rem ; height:2rem ;" >
+
+                </div>
+
+                <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                    <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                        <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
+                    </a>
+
+                    <ul class="nav col-10 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 mx-auto" style="margin-top: -2rem">
+                        <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
+                        <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
+                        <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
+                        <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
+                        <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+                    </ul>
+
+                    <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+                        <input type="search" class="form-control form-control-dark text-white bg-dark" placeholder="Search..." aria-label="Search" style="margin-top: -2rem; ">
+                    </form>
+
+                    <div class="text-end " style=";margin-left:0rem;">
+                        <a th:href="@{/auth/main/login}" type="button" class="btn btn-outline-light me-2 " style="margin-top: -2.4rem;">Iniciar Seción</a>
+                        <a th:href="@{/auth/main/formRegister}" type="button" class="btn btn-warning" style="margin-top: -2.4rem ;">Registrate</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-dark">
+                <div class="col-md-5 p-lg-5 mx-0 my-5" >
+                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true" style="width: 75rem; margin-left: -3rem;"  >
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner" >
+                            <div class="carousel-item active">
+                                <img src="https://elcomercio.pe/resizer/LnUEkkVpBGBzStw98jU1ZBtfSAI=/980x0/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/XBMSGOM3GBG33K2Q4SAC2YVIVY.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://elcomercio.pe/resizer/HScET7MoYDS3H9Y9Ij8xNr2Wbq4=/580x330/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/FST2OHIYNFDF5D3CG35TEDI2D4.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://elcomercio.pe/resizer/yPIHjiMVkoORSzDYlODvphycngE=/580x330/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/STJAJQYSSBE7DC7VG54ZESSYNI.jpg" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>  
+
+
+
+
+
+                </div>
+                <div class="product-device shadow-sm d-none d-md-block"></div>
+                <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+            </div>
+
+
+
+
+            <div><div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-dark " style="height: 45rem; color:white;">
+                    <div class="col-md-5 p-lg-5 mx-0 my-5" >
+
+                        <img th:src="@{/img/personal.png}" width="500px"class="position-absolute me-4"style="margin-left:23rem; margin-top:-4rem ;">
+                        <div class=" ms-7 mt-lg-5">
+                            <div class="intro-title  " >¿QUÉ ES EL <b>RUOS</b> ?</div>
+                            <div class="intro-content">
+                                <p>Es el Registro Único de Organizaciones Sociales, a cargo de las municipalidades distritales y de la Municipalidad Metropolitana de Lima.</p>
+
+                                <p>Dentro de lo establecido en la Ordenanza 1762-2013-MML, se describen los requisitos y el procedimiento para el reconocimiento de las organizaciones sociales y sus representantes, así como los actos que se realicen con posterioridad a su inscripción.</p></div>
+
+                            <div class="group-button">
+                                <a href="registrar"><button class="btn btn-transition-2 bg-black border-light text-light w-50  h-25"><span>Registrate</span></button></a>
+
+
+
+
+
+                            </div> </div>
+
+
+
+
+
+                        <div class="product-device shadow-sm d-none d-md-block"></div>
+                        <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-dark " style="height: 45rem; color:white;">
+                        <div class="col-md-5 p-lg-5 mx-0 my-5" >
+
+
+
+                            <table class="table table-light table-hover   " style="margin-left:-2rem ; width: 75rem;margin-top: -6rem;">
+
+
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th><br>
+                                <th scope="col">Nombre de la Organización</th><br>
+                                
+                                <th scope="col">Tipo de Organización </th><br>
+                                <th scope="col">Fecha de  Emisión de Resuloción</th><br>
+                                <th scope="col">Inicio de vigencia</th><br>
+                                 <th scope="col">Fin de vigencia</th><br>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                                                 <tr th:each="Inter:${vista}">
+                                                                  
+                                                                  <td  th:text="${Inter.id}"></td>
+                                                                  <td th:text="${Inter.nombre}"></td>
+                                                                  <td th:text="${Inter.tipo_os}"></td>
+                                                                  <td th:text="${Inter.fecha_emision}"></td>
+                                                                   <td th:text="${Inter.fecha_inicio}"></td>
+                                                                    <td th:text="${Inter.fecha_fin}"></td>
+                                          
+
+
+                                    </tr>
+                                
+
+                                </tbody>
+
+                            </table>
+
+
+                        </div> </div>
+                    <div class="product-device shadow-sm d-none d-md-block"></div>
+                    <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </main>
+
+    <footer class="container py-5">
+        <div class="row">
+            <div class="col-12 col-md">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img" viewBox="0 0 24 24"><title>Product</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg>
+                <small class="d-block mb-3 text-muted">&copy; 2017–2022</small>
+            </div>
+            <div class="col-6 col-md">
+                <h5>Features</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="link-secondary" href="#">Cool stuff</a></li>
+                    <li><a class="link-secondary" href="#">Random feature</a></li>
+                    <li><a class="link-secondary" href="#">Team feature</a></li>
+                    <li><a class="link-secondary" href="#">Stuff for developers</a></li>
+                    <li><a class="link-secondary" href="#">Another one</a></li>
+                    <li><a class="link-secondary" href="#">Last time</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md">
+                <h5>Resources</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="link-secondary" href="#">Resource name</a></li>
+                    <li><a class="link-secondary" href="#">Resource</a></li>
+                    <li><a class="link-secondary" href="#">Another resource</a></li>
+                    <li><a class="link-secondary" href="#">Final resource</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md">
+                <h5>Resources</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="link-secondary" href="#">Business</a></li>
+                    <li><a class="link-secondary" href="#">Education</a></li>
+                    <li><a class="link-secondary" href="#">Government</a></li>
+                    <li><a class="link-secondary" href="#">Gaming</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md">
+                <h5>About</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="link-secondary" href="#">Team</a></li>
+                    <li><a class="link-secondary" href="#">Locations</a></li>
+                    <li><a class="link-secondary" href="#">Privacy</a></li>
+                    <li><a class="link-secondary" href="#">Terms</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="/docs/5.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script th:href="@{/js/bootstrap.js}"></script>
+</body>
+</html>                                   

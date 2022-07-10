@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+    <head>   
+        <title>REGISTRO</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
+        <link th:href="@{/css/estilos.css}" rel="stylesheet" />
+    </head>
+    <body class="fondaso">
+        <div class="container-lg p-5 bg-white border-end " style="border-radius: 20px; width: 40rem">
+            <img th:src="@{/img/muni.png}" class="rounded mx-auto d-block" style="width: 8rem">
+            <h1 style="font-size: 1.5rem;text-align: center; color: #0A9200; margin-top: 10px">CREAR CUENTA</h1>
+            <form class="row g-3 needs-validation" novalidate>
+                <hr>
+                <div class="row ">
+                    <div class="col-6 mb-2 d-grid"> 
+                        <div class="d-flex">
+                            <h6>D.N.I</h6> <h6 class="text-danger ms-1">*</h6></div>
+                        <input class=" mb-2 uno form-control" type="text" maxlength="8" pattern="\d{8}" required>
+                        
+
+                    </div>
+                    <div class="col-6 mb-2">
+                        <div class="d-flex">
+                            <h6>NOMBRES</h6> <h6 class="text-danger ms-1">*</h6></div>
+                        <input class="form-control mb-2 uno " type="text" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 mb-2">
+                        <div class="d-flex">
+                            <h6>APELLIDO PATERNO</h6> <h6 class="text-danger ms-1">*</h6></div>
+                        <input class="form-control mb-2 uno" type="text" required>
+                    </div>
+                    <div class="col-6 mb-2">
+                        <div class="d-flex">
+                            <h6>APELLIDO MATERNO</h6> <h6 class="text-danger ms-1">*</h6></div>
+                        <input class="form-control mb-2 uno" type="text"  required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 mb-2">
+                        <div class="d-flex">
+                            <h6>FECHA NACIMIENTO</h6> <h6 class="text-danger ms-1">*</h6></div> 
+                        <input class="form-control mb-2 uno" type="date"  required>
+                    </div>
+                    <div class="col-6 mb-2">
+                        <div class="d-flex">
+                            <h6>TELÉFONO</h6> <h6 class="text-danger ms-1">*</h6></div>
+                        <input class="form-control mb-2 uno" type="tel" maxlength="9" pattern="\d{9}"  required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 mb-2">
+                        <div class="d-flex">
+                            <h6>CORREO </h6> <h6 class="text-danger ms-1">*</h6></div>
+                        <input class="form-control mb-2 uno" type="email" min="1921-01-01"  required>
+                    </div>
+                    <div class="col-6 mb-2">
+                        <div class="d-flex">
+                            <h6>DIRECCIÓN</h6> <h6 class="text-danger ms-1">*</h6></div>
+                        <input class="form-control mb-2 uno" type="text"  required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 mb-2">
+                        <div class="d-flex">
+                            <h6>CARGO</h6> <h6 class="text-danger ms-1">*</h6></div>
+                        <input class="form-control mb-3 uno" type="text"  required>
+                    </div>
+                    <div class="col-6 mb-2">
+                        <div class="d-flex">
+                            <h6>CONTRASEÑA</h6><h6 class="text-danger ms-1">*</h6></div>
+                        <input class="form-control mb-3 uno" type="password" required>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="form-check ms-1 mb-4">
+                        <input class="form-check-input ms-1" type="checkbox" value="" id="invalidCheck" required>
+                        <div class="d-flex">
+                            <label class="form-check-label ms-1" for="invalidCheck">
+                                HE LEÍDO Y ACEPTADO LOS TERMINOS Y CONDICIONES 
+                            </label><h6 class="text-danger ms-1">*</h6> </div>                          
+                    </div>
+                </div>  
+                <button class="form-control-sm offset-md-3 w-50 mb-md-5 mt-3 text-white fw-bold btn btn-primary mt-3 mx-auto "  data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: #0A9200;border-radius: 20px;border-color: #DDFF00;font-weight: 600;" id="boton" >REGISTRARME</button>
+            </form>
+
+            <div   class="modal fade mx-auto" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+                <div class="modal-dialog modal-dialog-centered" >
+                    <div class="modal-content mb-2 " style="width: 30rem; border-radius: 1rem; " >
+                        <div class="d-flex p-3 justify-content-end mt-2">
+                            <button type="button" class="btn-close mt-2 " style="margin-right: 0.5rem" data-bs-dismiss="modal" aria-label="Close"></button> 
+                        </div>
+                        <img th:src="@{/img/muni.png}" class="rounded mx-auto d-block" style="width: 8rem">
+                        <h1 style="font-size: 1.5rem;text-align: center; color: #0A9200; margin-top: 10px">REGISTRO COMPLETADO</h1>
+                        <hr class="mx-auto" style="width: 25rem">
+                        <div class="mx-auto mb-5" style="width: 22rem">
+                            <h6 style="text-align: center">Inicia sesión para continuar con el proceso de 
+                            registro su organización</h6>
+                            <a th:href="@{/auth/main/login}" type="submit" class="btn btn-primary mt-3" style="width:13rem;margin-left: 4.50rem;background-color: #0A9200;border-radius: 20px;border-color: #DDFF00;font-weight: 600">INICIAR SESIÓN</a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            (function () {
+                'use strict'
+
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.querySelectorAll('.needs-validation')
+
+                // Loop over them and prevent submission
+                Array.prototype.slice.call(forms)
+                        .forEach(function (form) {
+                            form.addEventListener('submit', function (event) {
+                                if (!form.checkValidity()) {
+                                    event.preventDefault()
+                                    event.stopPropagation()
+                                }
+
+                                form.classList.add('was-validated')
+                            }, false)
+                        })
+            })()
+
+        </script>
+        
+        <script th:src="@{/js/bootstrap.min.js}"></script>
+        
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

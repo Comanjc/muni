@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html  lang="en" xmlns:th="http://www.thymeleaf.org"
+       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+    <head>
+        <link rel="stylesheet" href="../static/css/bootstrap.min.css" type="text/css"/>
+
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
+        <link th:href="@{/css/estilos.css}" rel="stylesheet" />
+        <link th:href="@{/css/estiregistro.css}" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body class="fondaso">
+        <div  th:action="@{/auth/main/}" class="container-fluid ">
+            
+            
+            <div class="row flex-nowrap">
+
+                        <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 "style="background-color:#444444 ;">
+                            <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100 container" style="background-color: #36A12F;border-radius: 25px;">
+                                <a href="#" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                                    <span class="fs-5 d-none d-sm-inline">Menu</span>
+                                </a>
+                                      
+                        <div class="row">
+                            <div class="col-4 ">
+                                <i class="fa-solid fa-user cinco"></i>
+                                <h6 class="text-white" style="font-size: 0.7rem; text-align: center; margin-left: -0.5rem; font-weight: bold">RESPONSABLE OS</h6>
+
+                            </div>
+                            <div class="col-8 mt-3">
+
+                                <input type="text" name="" id="" class="form-label w-100  h-25" style="border-radius: 8px">
+                                <input type="text" name="" id="" class="form-label w-100 h-25" style="border-radius: 8px">
+
+                                <input type="text" name="" id="" class="form-label w-100 h-25" style="border-radius: 8px">
+                            </div>
+                                
+                                
+                                
+                                <hr>
+                                
+                                    <div class="dropdown pb-4">
+                                    
+                                   
+                                             
+                                        <a     th:href="@{/Interface}" type="submit"  class="btn btn-primary  ms-4" style="width:8rem;margin-left: 5.5rem;background-color: #646464;margin-top: 2rem;border-radius: 20px;border-color:#707070;font-weight: 600">Notificación</a>
+                                    
+                                   
+                                </div>
+                                
+                                   <div class="dropdown pb-4">
+                                    
+                                   
+                                             
+                                        <a     th:href="@{/Interface}" type="submit"  class="btn btn-primary  ms-4 mx-auto" style="width:10rem;margin-left: 5.5rem;background-color: #646464;margin-top: 0rem;border-radius: 20px;border-color:#707070;font-weight: 600">Organización S</a>
+                                    
+                                   
+                                </div>
+                                <div class="dropdown pb-4">
+                                    
+                                   
+                                             
+                                        <a     th:href="@{/Interface}" type="submit"  class="btn btn-primary  ms-4" style="width:8rem;margin-left: 5.5rem;background-color: #646464;margin-top: 15rem;border-radius: 20px;border-color:#707070;font-weight: 600">Cerrar Sesión</a>
+                                    
+                                   
+                                </div>
+                            </div>
+            
+            
+            
+            
+            
+
+           <!-- <div class="row  ">
+                <div class="col-2">
+                    <div class="container-fluid  ms-4 mt-4 mb-4" style="background-color:  #0CC60C; border-radius: 10px" >
+                        <div class="row">
+                            <div class="col-4 ">
+                                <i class="fa-solid fa-user cinco"></i>
+                                <h6 class="text-white" style="font-size: 0.7rem; text-align: center; margin-left: -0.5rem; font-weight: bold">RESPONSABLE OS</h6>
+
+                            </div>
+                            <div class="col-8 mt-3">
+
+                                <input type="text" name="" id="" class="form-label w-100  h-25" style="border-radius: 8px">
+                                <input type="text" name="" id="" class="form-label w-100 h-25" style="border-radius: 8px">
+
+                                <input type="text" name="" id="" class="form-label w-100 h-25" style="border-radius: 8px">
+                            </div>
+                            <hr>
+                            <a href="" class="btn seis mb-4 mt-3 ">NOTIFICACIONES</a>
+                            <a href="" class="btn seis mb-4">ORGANIZACIÓN SOCIAL</a>
+                            <a href="" class="btn seis mb-4" style="margin-top: 10rem">CERRAR SESION</a>
+                        </div>
+                    </div>
+                </div>-->
+
+
+           
+
+
+            </div>
+        </div>
+                     <div class="col-10">
+
+
+
+
+                    <div class="container position-absolute top-5 start-50  " style=" background-color: #0A9200;height:6rem;max-width: 1050px;margin-top: 5rem;margin-left: -26rem ;border-radius: 20px; color: white; ">
+                        <p class="mt-4 ">   Bienvenido(a) Upeu Chaclacayo, a continuación se le muestra dos cuadros para su proceso de registro.
+                            El primer cuadro es para realizar una nueva solicitud de registro de organización social, el segundo
+                            es para actualizar los datos del registro de la organización social ya existente.  </p> 
+                    </div>
+
+                    <div class="container position-absolute top-5 start-50 bg-black " style="height:3rem;max-width: 730px;margin-top: 13rem; margin-left: -17rem ;border-radius: 20px;text-align: center; justify-content: center; color:white;">
+                        <p style="margin-top: 0.8rem">Haga click en el cuadro que quiera selecccionar</p>
+                    </div>
+                    <div class="container position-absolute top-5 start-50" style="max-width: 300px;margin-top: 17rem; margin-left: -17.5rem ;border-radius: 20px;">
+
+                        <a th:href="@{/auth/main/register_os}" class="btn btn-primary border border-warning" style="color:white;box-shadow:10px ;border-radius: 20px; background-color: #0A9200;"> 
+
+                            <div class="card-body float-md-start" style="width: 18.5rem">
+
+                                <i class="fa-solid fa-file rounded mx-auto d-block  fa-9x" style="margin-top: 2rem;color: black"></i>
+
+                                <p class="mt-3" >Solicitar registro de Organización social</p>
+                            </div>
+                        </a>
+                    </div>   
+
+                    <div class=" container position-absolute top-5 start-50" style="max-width: 300px;margin-top: 17rem; margin-left: 6.0rem ;border-radius: 20px;">
+
+                        <a th:href="@{/auth/main/actualizar_os}" class="btn btn-primary border border-warning" style="color:white;box-shadow:10px ;border-radius: 20px; background-color: #0A9200;"> 
+
+                            <div class="card-body float-md-start" style="width: 18.5rem" >
+
+                                <i class="fa-solid fa-file-pen fa-9x" style="margin-top: 2rem;color: black;margin-left: 2rem"></i>
+                                <p class="mt-3">Actualizar registro de Organización social</p>
+                            </div>
+                        </a>
+                    </div>   
+
+
+
+
+                </div>
+    </div>
+            
+</div>
+        
+
+</body>
+</html>

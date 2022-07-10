@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
+        <link th:href="@{/css/estilos.css}" rel="stylesheet" />
+    </head>
+    <body class="container1 fondaso">
+        <div class="container mt-5 p-5" style="background: white; border-radius: 20px; width: 28rem;height: 34.5rem">
+            <img th:src="@{/img/muni.png}" class="rounded mx-auto d-block " style="width: 8rem;margin-top: -1rem">
+            <h1 style="font-size: 1.5rem;text-align: center; color: #0A9200; margin-top: 10px">INGRESO</h1>
+
+            <div class="mb-3">
+                <form th:action="@{/auth/main/menu}" class="needs-validation" novalidate>
+
+                    <hr>
+                    <div class="row mb-3 ms-4 ">
+                        <div class="d-flex ms-4">
+                            <h6 class="fw-bold">D.N.I.</h6><h5 class="text-danger fw-bold"> *</h5></label></div>
+
+                        <input type="text" class=" form-control uno w-75 ms-4 " id="exampleFormControlInput1" maxlength="8" pattern="\d{8}" required>
+                        <div class="invalid-tooltip ms-4">
+                            Porfavor ingrese un dni válido.
+                        </div>
+                    </div>
+                    <div class="row mb-3 ms-4">
+                        <div class="d-flex ms-4">
+                            <h6 class="fw-bold">CONTRASEÑA</h6><h5 class="text-danger fw-bold"> *</h5></label></div>
+
+                        <input type="password" class="form-control uno w-75 ms-4" id="exampleFormControlInput1" required>
+                        
+                    </div>
+
+                    <div class="ms-5">  
+
+                        <input th:href="@{/auth/main/menu}" type="submit" value="INICIAR SESIÓN" class="btn btn-primary mt-3 ms-4" style="width:13rem;margin-left: 5.5rem;background-color: #0A9200;border-radius: 20px;border-color: #DDFF00;font-weight: 600">
+
+                    </div>
+                </form>
+
+                <div class="mb-3 w-100 text-center mt-3">
+                    <a th:href="@{/auth/main/formRegister}" class="text-info"><h1 style="color: #5D5D5D;font-size: 1rem;margin-bottom: -1rem;font-weight: 400;">¿No tienes una cuenta?</h1></a>
+                    <br>
+                    <a th:href="@{/auth/main/recuperarcontra}" class="text-info"> <h1 style="color: #5D5D5D;font-size: 1rem;font-weight: 400">¿Olvidaste tu contraseña?</h1> </a>
+
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <script>
+            (function () {
+                'use strict'
+
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.querySelectorAll('.needs-validation')
+
+                // Loop over them and prevent submission
+                Array.prototype.slice.call(forms)
+                        .forEach(function (form) {
+                            form.addEventListener('submit', function (event) {
+                                if (!form.checkValidity()) {
+                                    event.preventDefault()
+                                    event.stopPropagation()
+                                }
+
+                                form.classList.add('was-validated')
+                            }, false)
+                        })
+            })()
+        </script>
+        <script th:src="@{/js/bootstrap.min.js}"></script>
+
+    </body>    
+</html>
