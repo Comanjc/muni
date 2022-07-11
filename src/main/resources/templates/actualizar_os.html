@@ -14,31 +14,40 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
     <body>
+        
+        
+         <div class="container-fluid">
         <div class="row">
             <!-- LOGIN -->
 
-            <div class="col-2 bg-dark sideb-control justify-content-between d-flex bg-opacity-75">
-                <div class="container-fluid  ms-4 mt-4 mb-4" style="background-color:  #0CC60C; border-radius: 10px" >
-                    <div class="row">
+                 <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block  sidebar collapse" style="background-color: #0A9200;">
+                    <div class="position-sticky pt-3">
+
                         <div class="col-4 ">
-                            <i class="fa-solid fa-user cinco"></i>
-                            <h6 class="text-white" style="font-size: 0.7rem; text-align: center; margin-left: -0.5rem; font-weight: bold">RESPONSABLE OS</h6>
+                               <i class="fa-solid fa-user " style="margin-left: 3rem;margin-top: -5rem;"></i>
+                                
+                                <h6 class="text-white" style="font-size: 0.7rem; text-align: center; margin-left: 5rem; margin-top:-1.3rem ;font-weight: bold">RESPONSABLE OS</h6>
 
+                            </div>
+                        
+                        
+                        
+                        
+                        
+                        <div class="dropdown pb-4">
+
+
+
+                            <a     th:href="@{/Interface}" type="submit"  class="btn btn-primary  ms-4 mx-auto" style="width:10rem;margin-left: 5.5rem;background-color: #646464;margin-top: 13rem;border-radius: 20px;border-color:#707070;font-weight: 600">Notificaciones</a>
                         </div>
-                        <div class="col-8 mt-3">
-
-                            <input type="text" name="" id="" class="form-label w-100  h-25" style="border-radius: 8px">
-                            <input type="text" name="" id="" class="form-label w-100 h-25" style="border-radius: 8px">
-
-                            <input type="text" name="" id="" class="form-label w-100 h-25" style="border-radius: 8px">
-                        </div>                      
-                        <hr>
-                        <a href="" class="btn seis mb-4 mt-3 ">NOTIFICACIONES</a>
-                        <a href="" class="btn seis mb-4">ORGANIZACIÓN SOCIAL</a>
-                        <a href="" class="btn seis" style="margin-top: 32rem">CERRAR SESION</a>
+                        <div class="dropdown pb-4">
+                            <a     th:href="@{/Interface}" type="submit"  class="btn btn-primary  ms-4 mx-auto" style="width:10rem;margin-left: 5.5rem;background-color: #646464;margin-top: 0rem;border-radius: 20px;border-color:#707070;font-weight: 600">Organización S</a>
+                        </div>
+                        <div class="dropdown pb-4">
+                            <a     th:href="@{/Interface}" type="submit"  class="btn btn-primary  ms-5" style="width:8rem;margin-left: 6rem;background-color: #646464;margin-top: 10rem;border-radius: 20px;border-color:#707070;font-weight: 600">Cerrar Sesión</a>
+                        </div>
                     </div>
-                </div>
-            </div >
+                </nav>
 
 
             <!-- REGISTRO OS -->
@@ -267,7 +276,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                         <div class="modal-content">
 
                                 <img th:src="@{/img/logo.png}" class="rounded mx-auto d-block mt-3" style="width: 8rem">
-                                <h1 style="font-size: 1.5rem;text-align: center; color: #0A9200; margin-top: 10px">SOLICITUD ACTUALIZADA EXITOSAMENTE</h1>
+                                <h1 style="font-size: 1.5rem;text-align: center; color: #0A9200; margin-top: 10px">SOLICITUD ENVIADO EXITOSAMENTE</h1>
                                 <hr>
                             <div class="modal-body">
                                 <p style="text-align: center; font-weight:  bold">Su solicitud se encuentra en pendiente revisión;
@@ -285,7 +294,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             </div>
         </div>
     </div>
-
+         </div>
     <script th:src="@{/js/bootstrap.min.js}"></script>
 </body>
 </html>

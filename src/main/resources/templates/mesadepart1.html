@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
+        <link th:href="@{/css/estiregistro.css}" rel="stylesheet" />
+              
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <div class="row">
+            <!-- LOGIN -->
+
+            <div class="col-2 bg-dark sideb-control justify-content-between d-flex bg-opacity-75">
+                <div class="container-fluid  ms-4 mt-4 mb-4" style="background-color:  #0CC60C; border-radius: 10px;" >
+                    <div class="row">
+                        <div class="col-4 ">
+                            <i class="fa-solid fa-user cinco" style="color: black"></i>
+                            <h6 class="text-white" style="font-size: 0.7rem; text-align: center; margin-left: -0.5rem; font-weight: bold">Mesa de Partes</h6>
+
+                        </div>
+                        <div class="col-8 mt-3">
+
+                            <input type="text" value="Nombre: Eduardo" name="" id="" class="form-label w-100  h-25" style="border-radius: 8px" disabled>
+                                <input type="text" value="Apellido: Hernandéz" name="" id="" class="form-label w-100 h-25" style="border-radius: 8px" disabled>
+
+                                <input type="text" value="Dni: 74657486" name="" id="" class="form-label w-100 h-25" style="border-radius: 8px" disabled>
+                        </div>                      
+                        <hr>
+                        <a href="" class="btn seis mb-4 mt-3 ">BANDEJA DE DOCUMENTOS</a>
+                        <a href="" class="btn seis" style="margin-top: 32rem">CERRAR SESION</a>
+                    </div>
+                </div>
+            </div >
+
+
+            <!-- REGISTRO OS -->
+            <div class="col-10 bg-secondary bg-opacity-25  p-5 modal-dialog-scrollable scrollspy-example" style="height: 60rem" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" tabindex="0">
+                <div>
+                    <form th:action="@{login}" class="mt-5 was-validated">
+                        <h2 class=" fw-bold text-center mt-3"  style="color: #06B006">BANDEJA DE DOCUMENTOS</h2> 
+                        <br>
+                        <hr class="bg-dark">                                  
+                    </form>
+                </div>
+
+
+                <!-- JD -->
+
+
+                <div style="background-color: white">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">VER</th>
+                                <th scope="col">DESCRIPCIÓN</th>
+                                <th scope="col">DOCUMENTO</th>
+                                <th scope="col">RESPONSABLE</th>
+                                <th scope="col">FECHA DE ENVÍO</th>
+                                <th scope="col">OPC.</th>
+                                <th scope="col">EST.</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row"><a class="" href="" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: green"><i class="fa-solid fa-eye"></i></a></th>
+                        
+                                <td>Solicitud de registro</td>
+                                <td>Solicitud_r</td>
+                                <td>Diana Sanchéz</td>
+                                <td>10/02/2020</td>
+                                <td><a href="url" data-bs-toggle="modal" data-bs-target="#exampleModal1"><i class="fa-solid fa-pencil"></i></a></td>
+                                <td><i class="fa-solid fa-circle"></i></td>
+                                
+                            </tr>
+                            <tr>
+                                <th scope="row"><a href="" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: green"><i class="fa-solid fa-eye"></i></a></th>
+                                <td>Solicitud de actualización</td>
+                                <td>Solicitud_a</td>
+                                <td>David Reyna</td>
+                                <td>10/07/2022</td>
+                                <td><a href="url" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fa-solid fa-pencil"></i></a></td>
+                                <td><i class="fa-solid fa-circle-check"></i></td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><a href="" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: green"><i class="fa-solid fa-eye"></i></a></th>
+                                <td>Solicitud de registro</td>
+                                <td>Solicitud_r</td>
+                                <td>Carol Acuña</td>
+                                <td>30/04/2022</td>
+                                <td><a href="url" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fa-solid fa-pencil" ></i></a></td>
+                                <td><i class="fa-solid fa-circle-xmark"></i></td>
+                                
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <!-- modal-eye-->
+                <div class="modal fade" id="exampleModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" style="margin-left: 10rem">
+
+                    <div class="modal-dialog modal-dialog-centered modal-lg" style="margin-left: 31rem">
+                        <div class="modal-content">
+                            <div class="d-flex p-3 justify-content-end mt-2">
+                                <button type="button" class="btn-close mt-2 " style="margin-right: 0.5rem" data-bs-dismiss="modal" aria-label="Close"></button> 
+                            </div>
+                            <img th:src="@{/img/logo.png}" class="rounded mx-auto d-block mt-3" style="width: 8rem">
+                            <h1 style="font-size: 1.5rem;text-align: center; color: #0A9200; margin-top: 10px">SOLICITUD ENVIADA EXITOSAMENTE</h1>
+                            <hr>
+                            <div class="modal-body ">
+                                <div class="row">                            
+                                    <div class="col-6 p-1">
+                                        <div class="bg-white p-1" style="border-radius: 10px ">
+                                            <div class="d-flex">
+                                                <h5 class="fw-bold mt-3 p-2" style="color: #1D8A02">SOLICITUD DIRIGIDA A LA GERENCIA DE PARTICIPACIÓN VECINAL</h5> 
+                                                <h4 class="mt-3 p-2 text-danger fw-bold">*</h4></div>
+                                            <input type="file" class="form-control tres mb-3" aria-label="file example" required>
+                                            <div class="invalid-feedback p-2">Example invalid form file feedback</div>          
+                                        </div>                               
+                                    </div>
+                                    <div class="col-6 p-1">
+                                        <div class="bg-white p-1" style="border-radius: 10px ">
+                                            <div class="d-flex">
+                                                <h5 class="fw-bold mt-3 p-2" style="color: #1D8A02">ESTATUTO Y ACTA DE APROBACIÓN</h5> 
+                                                <h4 class="mt-3 p-2 text-danger fw-bold">*</h4></div>
+                                            <input type="file" class="form-control tres mb-3" aria-label="file example" required>
+                                            <div class="invalid-feedback p-2">Example invalid form file feedback</div> 
+                                        </div>
+                                    </div> 
+                                </div>
+                                <div class="row">
+                                    <div class="col-6 p-1">
+                                        <div class="bg-white p-1" style="border-radius: 10px ">
+                                            <div class="d-flex">
+                                                <h5 class="fw-bold mt-3 p-2" style="color: #1D8A02">ACTA DE ELECCIÓN DEL ÓRGANO DIRECTIVO</h5> 
+                                                <h4 class="mt-3 p-2 text-danger fw-bold">*</h4></div>
+                                            <input type="file" class="form-control tres mb-3" aria-label="file example" required>
+                                            <div class="invalid-feedback p-1">Example invalid form file feedback</div> 
+                                        </div> 
+                                    </div> 
+                                    <div class="col-6 p-1">
+                                        <div class="bg-white p-1" style="border-radius: 10px ">
+                                            <div class="d-flex">
+                                                <h5 class="fw-bold mt-3 p-2" style="color: #1D8A02">NÓMINA DE LOS MIEMBROS DE LA ORGANIZACIÓN SOCIAL</h5> 
+                                                <h4 class="mt-3 p-2 text-danger fw-bold">*</h4></div>
+                                            <input type="file" class="form-control tres mb-3" aria-label="file example" required>
+                                            <div class="invalid-feedback p-1">Example invalid form file feedback</div> 
+                                        </div>
+                                    </div>                         
+                                    <div class="row">
+                                        <div class="col-6 p-1">
+                                            <div class="bg-white p-1" style="border-radius: 10px ">
+                                                <div class="d-flex">
+                                                    <h5 class="fw-bold mt-3 p-2" style="color: #1D8A02">PLANO O CROQUIS REFERENCIAL DE LA UBICACIÓN </h5> 
+                                                    <h4 class="mt-3 p-2 text-danger fw-bold">*</h4></div>
+                                                <input type="file" class="form-control tres mb-3" aria-label="file example" required>
+                                                <div class="invalid-feedback p-1">Example invalid form file feedback</div> 
+                                            </div>
+                                        </div>
+                                        <div class="col-6 p-1 ">
+                                            <div class="bg-white p-1" style="border-radius: 10px ">
+                                                <div class="d-flex">
+                                                    <h5 class="fw-bold mt-3 p-2" style="color: #1D8A02">COPIA DE DNI DE LOS MIEMBROS DE LA JUNTA DIRECTIVA</h5> 
+                                                    <h4 class="mt-3 p-2 text-danger fw-bold">*</h4></div>
+                                                <input type="file" class="form-control tres mb-3" aria-label="file example" required>
+                                                <div class="invalid-feedback p-1">Example invalid form file feedback</div> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer ">
+                                    <a href="url"><button type="button" class="btn btn-success  dos " style="margin-right: 19rem">CERRAR VENTANA</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- modal-pencil-->
+
+                    <div   class="modal fade mx-auto" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+                <div class="modal-dialog modal-dialog-centered" >
+                    <div class="modal-content mb-2 " style="width: 30rem; border-radius: 1rem; " >
+                        <div class="d-flex p-3 justify-content-end mt-2">
+                            <button type="button" class="btn-close mt-2 " style="margin-right: 0.5rem" data-bs-dismiss="modal" aria-label="Close"></button> 
+                        </div>
+                        <img th:src="@{/img/muni.png}" class="rounded mx-auto d-block" style="width: 8rem">
+                        <h1 style="font-size: 1.5rem;text-align: center; color: #0A9200; margin-top: 10px">REGISTRO COMPLETADO</h1>
+                        <hr class="mx-auto" style="width: 25rem">
+                        <div class="mx-auto mb-5" style="width: 22rem">
+                            <h6 style="text-align: center">Inicia sesión para continuar con el proceso de 
+                            registro su organización</h6>
+                            <a th:href="@{/auth/main/login}" type="submit" class="btn btn-primary mt-3" style="width:13rem;margin-left: 4.50rem;background-color: #0A9200;border-radius: 20px;border-color: #DDFF00;font-weight: 600">INICIAR SESIÓN</a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+                </div>
+            </div>
+                    
+                    
+                    
+                    
+                    
+                </div>
+                <!-- document -->
+                
+        </div>
+    </div>
+
+    <script th:src="@{/js/bootstrap.min.js}"></script>
+</body>
+</html>
