@@ -14,9 +14,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 
 @Controller
+  @RequestMapping("/auth/main/menu")
 public class MenuController {
     
-    @RequestMapping("/auth/main/menu")
+  
     @GetMapping
     public String main(){
         return "/menu";

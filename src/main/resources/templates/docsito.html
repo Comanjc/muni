@@ -5,39 +5,34 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>mesa de parts</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
         <link th:href="@{/css/estiregistro.css}" rel="stylesheet" />
-              
+       
+               
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
     <body>
         <div class="row">
             <!-- LOGIN -->
 
-            <div class="col-2 bg-dark sideb-control justify-content-between d-flex bg-opacity-75">
-                <div class="container-fluid  ms-4 mt-4 mb-4" style="background-color:  #0CC60C; border-radius: 10px;" >
-                    <div class="row">
-                        <div class="col-4 ">
-                            <i class="fa-solid fa-user cinco" style="color: black"></i>
-                            <h6 class="text-white" style="font-size: 0.7rem; text-align: center; margin-left: -0.5rem; font-weight: bold">Mesa de Partes</h6>
+               <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block  sidebar collapse" style="background-color: #0A9200;">
+                    <div class="position-sticky pt-3">
 
-                        </div>
-                        <div class="col-8 mt-3">
+                   
+               
 
-                            <input type="text" value="Nombre: Eduardo" name="" id="" class="form-label w-100  h-25" style="border-radius: 8px" disabled>
-                                <input type="text" value="Apellido: Hernandéz" name="" id="" class="form-label w-100 h-25" style="border-radius: 8px" disabled>
 
-                                <input type="text" value="Dni: 74657486" name="" id="" class="form-label w-100 h-25" style="border-radius: 8px" disabled>
-                        </div>                      
-                        <hr>
-                        <a href="" class="btn seis mb-4 mt-3 ">BANDEJA DE DOCUMENTOS</a>
-                        <a href="" class="btn seis" style="margin-top: 32rem">CERRAR SESION</a>
-                    </div>
-                </div>
-            </div >
+                        
+
+
+
+
+
+
+                </nav>
 
 
             <!-- REGISTRO OS -->
@@ -105,7 +100,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                     <!-- modal-eye-->
                 <div class="modal fade" id="exampleModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" style="margin-left: 10rem">
 
-                    <div class="modal-dialog modal-dialog-centered modal-lg" style="margin-left: 31rem">
+                    <div class="modal-dialog modal-dialog-centered modal-lg" style="margin-left: 10rem">
                         <div class="modal-content">
                             <div class="d-flex p-3 justify-content-end mt-2">
                                 <button type="button" class="btn-close mt-2 " style="margin-right: 0.5rem" data-bs-dismiss="modal" aria-label="Close"></button> 
@@ -175,7 +170,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                     </div>
                                 </div>
                                 <div class="modal-footer ">
-                                    <a href="url"><button type="button" class="btn btn-success  dos " style="margin-right: 19rem">CERRAR VENTANA</button></a>
+                                    <a th:href="@{ /auth/main/menudoc}"><button type="button" class="btn btn-success  dos " style="margin-right: 19rem">CERRAR VENTANA</button></a>
                                 </div>
                             </div>
                         </div>
@@ -214,7 +209,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 
         </div>
     </div>
-
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
     <script th:src="@{/js/bootstrap.min.js}"></script>
 </body>
 </html>

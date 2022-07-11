@@ -21,4 +21,15 @@ public class MenudesaController {
     
     return"/menudesarrollo";
     }
+    
+    @GetMapping("/docsito")
+    public String holi(){
+    return "/docsito";
+    }
+    
+    @GetMapping("/menudoc")
+    public String holu(){
+    
+    return "/menudoc";
+    }
 }
