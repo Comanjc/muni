@@ -14,15 +14,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 
 @Controller
-  @RequestMapping("/auth/main/menu")
+  @RequestMapping("/auth/main")
 public class MenuController {
     
   
-    @GetMapping
+    @GetMapping("/menu")
     public String main(){
-        return "/menu";
+        return "menu";
     }
    
+        @GetMapping("/notifi_os")
+    public String notifica(){
     
+        return "notifi_os";
+    
+    }
     
 }

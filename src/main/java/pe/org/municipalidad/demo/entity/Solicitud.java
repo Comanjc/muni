@@ -20,23 +20,23 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "denominacion")
+@Table(name = "solicitud")
 @Entity
-
-public class Denominacion implements Serializable {
-    
-     @Id
+public class Solicitud implements Serializable{
+    @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "iddenominacion")
+    @Column(name = "id_solicitud")
     private int id;
-    private String nombre;
-    @ManyToOne
-    @JoinColumn(name = "id_tipos")
+    private String n_mienbros;
+    private String nombre_os;
+    private String direccion;
+    private String  f_const;
+    private String  fines_os;
+    
+     @ManyToOne
+    @JoinColumn(name = "id_deno")
 
-    private Tipo_os  tipo_os_id_tipoos;
-   
-    
-    
+    private Denominacion DENOMINACION_ID_DENO  ;
     
     
 }

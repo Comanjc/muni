@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html   xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet"/>
+    </head>
+    <body>
+        <div class="container">
+ <table class="table table-light table-hover table-bordered border-primary   mx-auto">
+
+
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th><br>
+                                <th scope="col">Nombre de la Organización</th><br>
+
+                                <th scope="col">Tipo de Organización </th><br>
+                                <th scope="col">Fecha de  Emisión de Resuloción</th><br>
+                                <th scope="col">Inicio de vigencia</th><br>
+                                <th scope="col">Fin de vigencia</th><br>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    <tr th:each="Inter:${vista}">
+
+                                        <td  th:text="${Inter.id}"></td>
+                                        <td th:text="${Inter.nombre}"></td>
+                                        <td th:text="${Inter.tipo_os}"></td>
+                                        <td th:text="${Inter.fecha_emision}"></td>
+                                        <td th:text="${Inter.fecha_inicio}"></td>
+                                        <td th:text="${Inter.fecha_fin}"></td>
+
+
+
+                                    </tr>
+
+
+                                </tbody>
+
+ </table> </div>
+    </body>
+</html>

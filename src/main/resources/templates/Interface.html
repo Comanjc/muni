@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -239,42 +240,69 @@
                 </div>
             </div>
 
-            <div   class="modal fade  " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
-                <div class="modal-dialog modal-dialog-centered" >
-                    <div class="modal-content mb-2 " style="width: 30rem; border-radius: 1rem; " >
+         <div   class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content mb-2 " style=" border-radius: 1rem; " >
                         <div class="d-flex p-3 justify-content-end mt-2">
                             <button type="button" class="btn-close mt-2 " style="margin-right: 0.5rem" data-bs-dismiss="modal" aria-label="Close"></button> 
                         </div>
                         <img th:src="@{/img/muni.png}" class="rounded mx-auto d-block" style="width: 8rem">
                         <h1 style="font-size: 1.5rem;text-align: center; color: #0A9200; margin-top: 10px">MODELOS DE FORMATOS</h1>
-                        <hr class="mx-auto" style="width: 25rem">
-                        <div class="mx-auto mb-5" style="width: 22rem">
+                        <hr class="mx-auto" style="width: 45rem">
+                        <div class="mx-auto mb-5" style="width: 44rem">
                             <table class="table">
                                 <thead>
                                     <tr>
                                         <th scope="col">#</th>
-                                        <th scope="col">First</th>
-                                        <th scope="col">Last</th>
-                                        <th scope="col">Handle</th>
+                                        <th scope="col">NOMBRE DE MODELO DE FORMATO DE DOCUMENTO</th>
+                                        <th scope="col">MODELO REFERENCIAL</th>
+                                        <th scope="col">MODELO PARA LLENAR</th>     
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <th scope="row">1</th>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
+                                        <td>Solicitud para registrar una nueva organización</td>
+                                        <td><a th:href="@{pdf/modelo_formato.pdf}" download="SOLICITUD_PARA_REGISTRO_NUEVO_DE_ORGANIZACIÓN_(Modelo)" style="margin-left: 2rem;"><i class="fa-solid fa-file-pdf  fa-2x" style="color: red"></i></a></td>
+                                        <td><a th:href="@{pdf/modelo_llenar.docx}" download="SOLICITUD_PARA_REGISTRO_NUEVO_DE_ORGANIZACIÓN_(Para llenar)" style="margin-left: 2.5rem;"><i class="fa-solid fa-file-word fa-2x" ></i></a></td>
+                                        
                                     </tr>
                                     <tr>
                                         <th scope="row">2</th>
-                                        <td>Jacob</td>
-                                        <td>Thornton</td>
-                                        <td>@fat</td>
+                                        <td>Solicitud para actualizar una organización</td>
+                                        <td><a th:href="@{pdf/modelo_formato.pdf}" download="SOLICITUD_PARA_ACTUALIZACIÓN_DE_ORGANIZACIÓN_(Modelo)" style="margin-left: 2rem;"><i class="fa-solid fa-file-pdf  fa-2x" style="color: red"></i></a></td>
+                                        <td><a th:href="@{pdf/modelo_llenar.docx}" download="SOLICITUD_PARA_REGISTRO_NUEVO_DE_ORGANIZACIÓN_(Para llenar)" style="margin-left: 2.5rem;"><i class="fa-solid fa-file-word fa-2x"></i></a></td>
+                                        
                                     </tr>
                                     <tr>
                                         <th scope="row">3</th>
-                                        <td colspan="2">Larry the Bird</td>
-                                        <td>@twitter</td>
+                                        <td>Estatuto y acta de aprobación</td>
+                                        <td><a th:href="@{pdf/modelo_formato.pdf}" download="ESTATUTO_Y_ACTA_DE_APROBACIÓN_(Modelo)" style="margin-left: 2rem;"><i class="fa-solid fa-file-pdf  fa-2x" style="color: red"></i></a></td>
+                                        <td><a th:href="@{pdf/modelo_llenar.docx}" download="ESTATUTO_Y_ACTA_DE_APROBACIÓN_(Para llenar)" style="margin-left: 2.5rem;"><i class="fa-solid fa-file-word fa-2x"></i></a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">4</th>
+                                        <td>Acta de elección del órgano directivo</td>
+                                        <td><a th:href="@{pdf/modelo_formato.pdf}" download="ACTA_DE_ELECCIÓN_DEL_ÓRGANO_DIRECTIVO(Modelo)" style="margin-left: 2rem;"><i class="fa-solid fa-file-pdf  fa-2x" style="color: red"></i></a></td>
+                                        <td><a th:href="@{pdf/modelo_llenar.docx}" download="ACTA_DE_ELECCIÓN_DEL_ÓRGANO_DIRECTIVO_(Para llenar)" style="margin-left: 2.5rem;"><i class="fa-solid fa-file-word fa-2x"></i></a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">5</th>
+                                        <td>Nómina de los miembros de la Organización Social</td>
+                                        <td><a th:href="@{pdf/modelo_formato.pdf}" download="NÓMINA_DE_LOS_MIEBROS_DE_LA_ORGANIZACIÓN_SOCIAL_(Modelo)" style="margin-left: 2rem;"><i class="fa-solid fa-file-pdf  fa-2x" style="color: red"></i></a></td>
+                                        <td><a th:href="@{pdf/modelo_llenar.docx}" download="NÓMINA_DE_LOS_MIEBROS_DE_LA_ORGANIZACIÓN_SOCIAL_(Para llenar)" style="margin-left: 2.5rem;"><i class="fa-solid fa-file-word fa-2x"></i></a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">6</th>
+                                        <td>Nómina de los miembros de la Órgano Directivo</td>
+                                        <td><a th:href="@{pdf/modelo_formato.pdf}" download="NÓMINA_DE_LOS_MIEMBROS_DEL_ÓRGANO_DIRECTIVO_(Modelo)" style="margin-left: 2rem;"><i class="fa-solid fa-file-pdf  fa-2x" style="color: red"></i></a></td>
+                                        <td><a th:href="@{pdf/modelo_llenar.docx}" download="NÓMINA_DE_LOS_MIEMBROS_DEL_ÓRGANO_DIRECTIVO_(Para llenar)" style="margin-left: 2.5rem;"><i class="fa-solid fa-file-word fa-2x"></i></a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">7</th>
+                                        <td>Plano o croquis referencial de la ubicación del local</td>
+                                        <td><a th:href="@{pdf/modelo_formato.pdf}" download="PLANO_O_CROQUIS_REFERENCIAL_DE_LA_UBICACIÓN_DEL_LOCAL_(Modelo)" style="margin-left: 2rem;"><i class="fa-solid fa-file-pdf  fa-2x" style="color: red"></i></a></td>                                     
+                                        <td><a th:href="@{pdf/modelo_llenar.docx}" download="PLANO_O_CROQUIS_REFERENCIAL_DE_LA_UBICACIÓN_DEL_LOCAL_(Para llenar)" style="margin-left: 2.5rem;"><i class="fa-solid fa-file-word fa-2x"></i></a></td>
                                     </tr>
                                 </tbody>
                             </table>
