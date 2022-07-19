@@ -35,7 +35,16 @@
     <header class="navbar  sticky-top bg-warning flex-md-nowrap p-0 shadow ">
         <a class="navbar-brand col-md-3 col-lg-2 me-0 px-2 fs-6 text-light " th:href="@{/auth/main/menu}">REGISTRAR ORGANIZACIÓN</a>
 
-
+        <div class="btn-group dropstart">
+  <button class="btn btn-secondary dropdown-toggle bg-green2 " style="margin-right:  0.5rem;" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    USUARIOS
+  </button>
+  <ul class="dropdown-menu " aria-labelledby="dropdownMenuButton1">
+    <li><a class="dropdown-item" href="#">Mesa de Partes</a></li>
+    <li><a class="dropdown-item" th:href="@{/auth/main/menudesarrollo}">Gerente de desarrollo</a></li>
+    <li><a class="dropdown-item" href="#">Subgerencia</a></li>
+  </ul>
+</div>
 
     </header>
 

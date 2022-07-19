@@ -22,13 +22,13 @@ public class NotificacionServiceImpl   implements  NotificacionService{
     
     
     @Override
-    public Notificacion create(Notificacion vista) {
-        return notificacionRepository.save( vista);
+    public Notificacion create(Notificacion notificacion) {
+        return notificacionRepository.save( notificacion);
     }
 
     @Override
-    public Notificacion update(Notificacion vista) {
-        return notificacionRepository.save(vista);
+    public Notificacion update(Notificacion notificacion) {
+        return notificacionRepository.save(notificacion);
     }
 
     @Override

@@ -25,7 +25,7 @@ public class Notificacion implements  Serializable{
      @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "idnotificacion")
-    private int id;
+    private int idnotificacion;
     
     private String descripcion;
     private String documento;

@@ -9,13 +9,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import pe.org.municipalidad.demo.servicios.SexoService;
+import pe.org.municipalidad.demo.servicios.NotificacionService;
 
 
-/**
- *
- * @author estef
- */
+
 
 @Controller
   @RequestMapping("/auth/main")
@@ -28,24 +25,24 @@ public class MenuController {
         
     }
     
-    
+    /*
     
      @Autowired
-    private SexoService sexoservice ;
+    private NotificacionService notificacionservice ;
       
-    @GetMapping()
+  @GetMapping("/notifi_os")
     public String index( org.springframework.ui.Model model){
         
-        model.addAttribute("sexo", sexoservice.readAll());
+        model.addAttribute("notificacion", notificacionservice.readAll());
         
-    return "register_os";
+    return "notifi_os";
     
-    }
+    }*/
     
     
 
     
-        @GetMapping("/notifi_os")
+      @GetMapping("/notifi_os")
     public String notifica(){
     
         return "notifi_os";
@@ -53,6 +50,3 @@ public class MenuController {
     }
     
 }
-/*
-
-*/
