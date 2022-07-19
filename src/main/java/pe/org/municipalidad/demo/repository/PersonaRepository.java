@@ -4,11 +4,11 @@
  */
 package pe.org.municipalidad.demo.repository;
 
-import pe.org.municipalidad.demo.entity.Vista;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+import pe.org.municipalidad.demo.entity.Persona;
 
 @Repository
-public interface VistaRepository  extends JpaRepository<Vista , Integer> {
+public interface PersonaRepository  extends JpaRepository<Persona , Integer>{
     
 }

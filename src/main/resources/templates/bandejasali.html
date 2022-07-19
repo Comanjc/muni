@@ -33,7 +33,7 @@
     <body>
 
         <header class="navbar  sticky-top bg-warning flex-md-nowrap p-0 shadow ">
-            <a class="navbar-brand col-md-3 col-lg-2 me-0 px-2 fs-6 text-light ">NOTIFICACIONES</a>
+            <a class="navbar-brand col-md-3 col-lg-2 me-0 px-2 fs-6 text-light ">BANDEJA DE SALIDA</a>
         </header>
         <div class="container-fluid">
             <div class="row">
@@ -41,37 +41,29 @@
                     <div class="position-sticky pt-3">
                         <ul class="nav flex-column">
                             <li class="nav-item ">
-                                <a th:href="@{/auth/main/menu}" class="nav-link active  text-warning  " href="#" aria-current="page" >
+                                <a class="nav-link active  text-warning  " th:href="@{/auth/main/menudesarrollo}" aria-current="page" >
                                     <span data-feather="home" class="align-text-bottom"></span> Home
                                 </a>
                             </li>
                             <hr>
                             <li class="nav-item ">
-                                <a class="nav-link  text-warning " th:href="@{/auth/main/notifi_os}">
-                                    <i class="fa-regular fa-bell" style="margin-left: 0.3rem"></i>  &nbsp;&nbsp;Notificaciónes
+                                <a class="nav-link  text-warning " th:href="@{/auth/main/bandejaentra}">
+                                    <i class="fa-solid fa-envelope" style="margin-left: 0.3rem"></i>&nbsp;&nbsp;Bandeja de entrada
                                 </a>
                             </li>
                             <hr>
                             <li class="nav-item">
-                                <a class="nav-link text-warning  " th:href="@{/auth/main/register_os}">
-                                    <i class="fa-regular fa-file" style="margin-left: 0.3rem"></i>  &nbsp;&nbsp;Solicitar Registro
+                                <a class="nav-link text-warning  " th:href="@{/auth/main/bandejasali}">
+                                    <i class="fa-solid fa-envelope-open" style="margin-left: 0.3rem"></i>  &nbsp;&nbsp;Bandeja de salida
                                 </a>
                             </li>
-                            <hr>
-                            <li class="nav-item">
-                                <a class="nav-link text-warning  " th:href="@{/auth/main/actualizar_os}">
-                                    <i class="fa-solid fa-file-pen" style="margin-left: 0.3rem"></i> &nbsp;&nbsp;Actualizar Registro 
-                                </a>
-                            </li>
-
-
                         </ul>
                         <hr>
                         <br>
                         <ul class="nav flex-column mb-6 ">
 
                             <li class="nav-item  ">
-                                <a class="nav-link btn btn-light mx-auto    w-75 h-25  fs-7 " th:href="@{/auth/main/login}">
+                                <a class="nav-link btn btn-light mx-auto    w-75 h-25  fs-7 " style="margin-top: 4rem" th:href="@{/auth/main/login}">
                                     CERRAR SESIÓN&nbsp <i class="fa-solid fa-right-from-bracket"></i>
                                 </a>
                             </li>
@@ -83,7 +75,7 @@
 
                     <div class="container">
 
-                        <h2 class="text-center text-uppercase bg-green" style="margin-top: 3rem">Bandeja de notificaciones</h2>
+                        <h2 class="text-center text-uppercase bg-green" style="margin-top: 3rem">Bandeja de Salida</h2>
 
                         <table class="table table-light table-hover table-bordered " style="margin-top: -5rem;">
 
@@ -97,29 +89,30 @@
                             <th scope="col">RESPONSABLE</th><br>
                             <th scope="col">FECHA DE ENVÍO</th><br>
                             <th scope="col">ESTADO</th><br>
-                           
+                            <th scope="col">ADJUNTAR ARCHIVO</th><br>
                             </tr>
                             </thead>
                             <tbody>
-                                <tr th:each="noti:${notificacion}">
-
-                                    <td  ><a href="" class="ms-4"><i class="fa-solid fa-eye"></i></a></td>
-                                    <td th:text="${noti.descripcion}"></td>
-                                    <td th:text="${noti.documento}"></td>
-                                    <td th:text="${noti.responsable}"></td>
-                                    <td th:text="${noti.fecha}"></td>
-                                    <td th:text="${noti.estado}"></td>
-                                    
-                                </tr>
+                                   <tr>
+                                <th scope="row"><i class="fa-solid fa-eye"></i></th>
+                                <td scope="col">solicitud</td>
+                                <td scope="col">solicitud.pdf</td>
+                                <td scope="col">Eduardo Hernandez</td>
+                                <td scope="col">21-jul-22</td>
+                                    <td scope="col">Activado</td>
                                 
+                                  <td>
+                                              <a href="a" title="Editar Registro"><i class='fa-solid fa-pen-to-square text-info me-3'></i></a>
+                            <a href="" title="Eliminar Registro"><i class='fa-solid fa-trash-can text-danger me-3'></i></a>
+                                            
+                                            
+                                        </td>
+                            </tr>
+
 
                             </tbody>
 
-                        </table> 
-                    
-                    
-                    
-                    </div>
+                        </table> </div>
 
 
 

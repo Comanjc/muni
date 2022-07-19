@@ -5,14 +5,16 @@
 package pe.org.municipalidad.demo.servicios;
 
 import java.util.List;
-import org.springframework.beans.factory.annotation.Autowired;
 import pe.org.municipalidad.demo.entity.Notificacion;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import pe.org.municipalidad.demo.repository.NotificacionRepository;
 
 /**
  *
  * @author estef
  */
+@Service
 public class NotificacionServiceImpl   implements  NotificacionService{
     
        @Autowired

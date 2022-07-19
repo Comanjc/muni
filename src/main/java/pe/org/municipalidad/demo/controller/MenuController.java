@@ -9,7 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import pe.org.municipalidad.demo.servicios.NotificacionService;
+import  pe.org.municipalidad.demo.servicios.NotificacionService;
 
 
 
@@ -18,6 +18,19 @@ import pe.org.municipalidad.demo.servicios.NotificacionService;
   @RequestMapping("/auth/main")
 public class MenuController {
 
+    
+    
+         @Autowired
+    private NotificacionService notificacionservice ;
+      
+  @GetMapping("/notifi_os")
+    public String notify( org.springframework.ui.Model model){
+        
+        model.addAttribute("notificacion", notificacionservice.readAll());
+        
+    return "notifi_os";
+    
+    }
   
     @GetMapping("/menu")
     public String main(){
@@ -25,28 +38,12 @@ public class MenuController {
         
     }
     
-    /*
-    
-     @Autowired
-    private NotificacionService notificacionservice ;
-      
-  @GetMapping("/notifi_os")
-    public String index( org.springframework.ui.Model model){
-        
-        model.addAttribute("notificacion", notificacionservice.readAll());
-        
-    return "notifi_os";
-    
-    }*/
     
     
 
     
-      @GetMapping("/notifi_os")
-    public String notifica(){
     
-        return "notifi_os";
-    
-    }
+
+   
     
 }

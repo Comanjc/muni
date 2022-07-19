@@ -33,7 +33,7 @@
     <body>
 
         <header class="navbar  sticky-top bg-warning flex-md-nowrap p-0 shadow ">
-            <a class="navbar-brand col-md-3 col-lg-2 me-0 px-2 fs-6 text-light ">NOTIFICACIONES</a>
+            <a class="navbar-brand col-md-3 col-lg-2 me-0 px-2 fs-6 text-light ">HISTORIAL DE SOLICITUDES</a>
         </header>
         <div class="container-fluid">
             <div class="row">
@@ -41,29 +41,22 @@
                     <div class="position-sticky pt-3">
                         <ul class="nav flex-column">
                             <li class="nav-item ">
-                                <a th:href="@{/auth/main/menu}" class="nav-link active  text-warning  " href="#" aria-current="page" >
+                                <a th:href="@{/auth/main/menusp}" class="nav-link active  text-warning  " href="#" aria-current="page" >
                                     <span data-feather="home" class="align-text-bottom"></span> Home
                                 </a>
                             </li>
                             <hr>
                             <li class="nav-item ">
-                                <a class="nav-link  text-warning " th:href="@{/auth/main/notifi_os}">
-                                    <i class="fa-regular fa-bell" style="margin-left: 0.3rem"></i>  &nbsp;&nbsp;Notificaciónes
+                                <a class="nav-link  text-warning " th:href="@{/auth/main/admisoli}">
+                                    <i class="fa-solid fa-file-export" style="margin-left: 0.3rem"></i>  &nbsp;&nbsp;Aministración de Solicitudes
                                 </a>
                             </li>
                             <hr>
                             <li class="nav-item">
-                                <a class="nav-link text-warning  " th:href="@{/auth/main/register_os}">
-                                    <i class="fa-regular fa-file" style="margin-left: 0.3rem"></i>  &nbsp;&nbsp;Solicitar Registro
+                                <a class="nav-link text-warning  " th:href="@{/auth/main/histsoli}">
+                                    <i class="fa-solid fa-clock-rotate-left" style="margin-left: 0.3rem"></i>  &nbsp;&nbsp;Historial de Solicitudes
                                 </a>
                             </li>
-                            <hr>
-                            <li class="nav-item">
-                                <a class="nav-link text-warning  " th:href="@{/auth/main/actualizar_os}">
-                                    <i class="fa-solid fa-file-pen" style="margin-left: 0.3rem"></i> &nbsp;&nbsp;Actualizar Registro 
-                                </a>
-                            </li>
-
 
                         </ul>
                         <hr>
@@ -71,7 +64,7 @@
                         <ul class="nav flex-column mb-6 ">
 
                             <li class="nav-item  ">
-                                <a class="nav-link btn btn-light mx-auto    w-75 h-25  fs-7 " th:href="@{/auth/main/login}">
+                                <a class="nav-link btn btn-light mx-auto    w-75 h-25  fs-7 " style="margin-top: 3.5rem"  th:href="@{/auth/main/login}">
                                     CERRAR SESIÓN&nbsp <i class="fa-solid fa-right-from-bracket"></i>
                                 </a>
                             </li>
@@ -83,7 +76,7 @@
 
                     <div class="container">
 
-                        <h2 class="text-center text-uppercase bg-green" style="margin-top: 3rem">Bandeja de notificaciones</h2>
+                        <h2 class="text-center text-uppercase bg-green" style="margin-top: 3rem">Historial de Solicitudes</h2>
 
                         <table class="table table-light table-hover table-bordered " style="margin-top: -5rem;">
 
@@ -97,29 +90,24 @@
                             <th scope="col">RESPONSABLE</th><br>
                             <th scope="col">FECHA DE ENVÍO</th><br>
                             <th scope="col">ESTADO</th><br>
-                           
+                            <th scope="col">ACCION</th><br>
                             </tr>
                             </thead>
                             <tbody>
                                 <tr th:each="noti:${notificacion}">
 
-                                    <td  ><a href="" class="ms-4"><i class="fa-solid fa-eye"></i></a></td>
+                                    <td  th:text="${noti.Id}"></td>
                                     <td th:text="${noti.descripcion}"></td>
                                     <td th:text="${noti.documento}"></td>
                                     <td th:text="${noti.responsable}"></td>
                                     <td th:text="${noti.fecha}"></td>
                                     <td th:text="${noti.estado}"></td>
-                                    
                                 </tr>
-                                
+
 
                             </tbody>
 
-                        </table> 
-                    
-                    
-                    
-                    </div>
+                        </table> </div>
 
 
 

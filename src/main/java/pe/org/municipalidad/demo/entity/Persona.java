@@ -15,23 +15,33 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+
+
+
+
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "notificaciones")
+@Table(name = "persona")
 @Entity
-public class Notificacion implements  Serializable{
+public class Persona implements  Serializable{
     
-     @Id
+    
+    
+      @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "idnotificacion")
+    @Column(name = "idpersona")
     private int id;
     
-    private String descripcion;
-    private String documento;
+    private String cargo;
     private String responsable;
+    private String dni;
     private String fecha;
-    private String estado;
+    private String  sexo;
+ 
+    
+    
     
     
 }

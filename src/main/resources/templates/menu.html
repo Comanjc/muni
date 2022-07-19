@@ -40,9 +40,9 @@
     USUARIOS
   </button>
   <ul class="dropdown-menu " aria-labelledby="dropdownMenuButton1">
-    <li><a class="dropdown-item" href="#">Mesa de Partes</a></li>
+    <li><a class="dropdown-item" th:href="@{/auth/main/menump}">Mesa de Partes</a></li>
     <li><a class="dropdown-item" th:href="@{/auth/main/menudesarrollo}">Gerente de desarrollo</a></li>
-    <li><a class="dropdown-item" href="#">Subgerencia</a></li>
+    <li><a class="dropdown-item" th:href="@{/auth/main/menusp}">Subgerencia de PV</a></li>
   </ul>
 </div>
 
@@ -52,33 +52,33 @@
         <div class="row">
             <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-green2 sidebar collapse border border-success">
                 <div class="position-sticky pt-3">
-                    <ul class="nav flex-column">
-                        <li class="nav-item ">
-                            <a class="nav-link active  text-warning  " href="#" aria-current="page" >
-                                <span data-feather="home" class="align-text-bottom"></span> Home
-                            </a>
-                        </li>
-                        <hr>
-                        <li class="nav-item ">
-                            <a class="nav-link  text-warning " th:href="@{/auth/main/notifi_os}">
-                            <i class="fa-solid fa-bell"></i>  Notificaciónes
-                            </a>
-                        </li>
-                        <hr>
-                        <li class="nav-item">
-                            <a class="nav-link text-warning  " href="#">
-                               <i class="fa-solid fa-file"></i>  Solicitar Registro
-                            </a>
-                        </li>
-                         <hr>
-                        <li class="nav-item">
-                            <a class="nav-link text-warning  " href="#">
-                             <i class="fa-solid fa-file-pen"></i> Actualizar Registro 
-                            </a>
-                        </li>
+                     <ul class="nav flex-column">
+                            <li class="nav-item ">
+                                <a th:href="@{/auth/main/menu}" class="nav-link active  text-warning  " href="#" aria-current="page" >
+                                    <span data-feather="home" class="align-text-bottom"></span> Home
+                                </a>
+                            </li>
+                            <hr>
+                            <li class="nav-item ">
+                                <a class="nav-link  text-warning " th:href="@{/auth/main/notifi_os}">
+                                    <i class="fa-regular fa-bell" style="margin-left: 0.3rem"></i>  &nbsp;&nbsp;Notificaciónes
+                                </a>
+                            </li>
+                            <hr>
+                            <li class="nav-item">
+                                <a class="nav-link text-warning  " th:href="@{/auth/main/register_os}">
+                                    <i class="fa-regular fa-file" style="margin-left: 0.3rem"></i>  &nbsp;&nbsp;Solicitar Registro
+                                </a>
+                            </li>
+                            <hr>
+                            <li class="nav-item">
+                                <a class="nav-link text-warning  " th:href="@{/auth/main/actualizar_os}">
+                                    <i class="fa-solid fa-file-pen" style="margin-left: 0.3rem"></i> &nbsp;&nbsp;Actualizar Registro 
+                                </a>
+                            </li>
 
 
-                    </ul>
+                        </ul>
                     <hr>
                     <br>
                     <ul class="nav flex-column mb-6 ">

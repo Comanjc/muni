@@ -14,36 +14,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @Controller
 @RequestMapping("/auth/main")
-public class MenudesaController {
-    
-    @GetMapping("/menudesarrollo")
+public class MenuspController {
+    @GetMapping("/menusp")
     public String hola(){
     
-    return"/menudesarrollo";
+    return"/menusp";
     }
+    @GetMapping("/admisoli")
+    public String admisol(){
     
-    @GetMapping("/docsito")
-    public String holi(){
-    return "/docsito";
+    return"/admisoli";
     }
+    @GetMapping("/histsoli")
+    public String hist(){
     
-    @GetMapping("/menudoc")
-    public String holu(){
-    
-    return "/menudoc";
+    return"/histsoli";
     }
-    
-    @GetMapping("/bandejaentra")
-    public String bandejaent(){
-    
-    return "/bandejaentra";
-    }
-    
-    @GetMapping("/bandejasali")
-    public String bandejasal(){
-    
-    return "/bandejasali";
-    }
-    
-    
 }

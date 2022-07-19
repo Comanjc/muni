@@ -12,38 +12,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
  *
  * @author estef
  */
+
 @Controller
 @RequestMapping("/auth/main")
-public class MenudesaController {
-    
-    @GetMapping("/menudesarrollo")
+public class MenumpController {
+    @GetMapping("/menump")
     public String hola(){
     
-    return"/menudesarrollo";
+    return"/menump";
     }
     
-    @GetMapping("/docsito")
-    public String holi(){
-    return "/docsito";
+    @GetMapping("/bandejadocumen")
+    public String bande(){
+        return "/bandejadocumen";
     }
-    
-    @GetMapping("/menudoc")
-    public String holu(){
-    
-    return "/menudoc";
-    }
-    
-    @GetMapping("/bandejaentra")
-    public String bandejaent(){
-    
-    return "/bandejaentra";
-    }
-    
-    @GetMapping("/bandejasali")
-    public String bandejasal(){
-    
-    return "/bandejasali";
-    }
-    
-    
 }
