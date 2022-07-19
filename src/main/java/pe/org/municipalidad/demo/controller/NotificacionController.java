@@ -7,10 +7,7 @@ package pe.org.municipalidad.demo.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-
-import pe.org.municipalidad.demo.servicios.SexoService;
-
+import pe.org.municipalidad.demo.servicios.NotificacionService;
 
 /**
  *
@@ -18,33 +15,24 @@ import pe.org.municipalidad.demo.servicios.SexoService;
  */
 
 @Controller
-  @RequestMapping("/auth/main")
-public class MenuController {
+public class NotificacionController {
+    
+    
+    
+     /*   @Autowired
+    private  NotificacionService notificacionService;
 
-  
-    @GetMapping("/menu")
-    public String main(){
-        return "menu";
-        
-    }
-    
-    
-    
-     @Autowired
-    private SexoService sexoservice ;
-      
     @GetMapping()
-    public String index( org.springframework.ui.Model model){
-        
-        model.addAttribute("sexo", sexoservice.readAll());
-        
-    return "register_os";
-    
-    }
-    
-    
+    public String lol( org.springframework.ui.Model model){
 
+        model.addAttribute("notificacion", notificacionService.readAll());
+
+    return "notifi_os";
+
+    }*/
     
+    
+      
         @GetMapping("/notifi_os")
     public String notifica(){
     
@@ -53,6 +41,5 @@ public class MenuController {
     }
     
 }
-/*
+    
 
-*/

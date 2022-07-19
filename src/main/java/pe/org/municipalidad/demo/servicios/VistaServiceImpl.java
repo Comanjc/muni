@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pe.org.municipalidad.demo.repository.VistaRepository;
 
+
 @Service
 public class VistaServiceImpl implements VistaService {
 

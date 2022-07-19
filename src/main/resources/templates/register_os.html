@@ -144,15 +144,15 @@
 
                 <!-- JD -->
                 <div>
-                    <form th:action="@{login}" class="mt-5 was-validated">
+                    <form th:action="@{login}" class="mt-5 ">
                         <h2 class=" fw-bold text-center mt-3 bg-green">JUNTA DIRECTIVA </h2>
                         <h5 class="text-dark fw-bold text-center mt-2">INGRESE LOS DATOS DE SU JUNTA DIRECTIVA </h5>
                         <hr class="bg-dark">
                         <div class="row">
                             <div class="col-12">
                                 <h5 class="fw-bold mt-3 p-2 bg-green ">CARGO</h5>
-                                <select name="" id="" class="form-select tres p-2 w-100 h-25" required>
-                                    <option value="">SELECCIONE SU CARGO</option>
+                                <select name="" id="" class="form-select tres p-2 w-100 h-25 " required>
+                                    <option value="">Selecione su cargo</option>
                                 </select>
                                 <div class="invalid-feedback">Example invalid select feedback</div>
                             </div>
@@ -185,6 +185,9 @@
                                 <h5 class=" fw-bold mt-3 p-2 bg-green">SEXO</h5>
                                 <select name="" id="" class="form-select tres p-2  sexo" required="">
                                     <option value="">SELECCIONE SU SEXO</option>
+                                    <option value="1">Masculino</option>
+                                     <option value="2">Femenino</option>
+                                    
                                 </select>
                                 <div class="invalid-feedback">Example invalid select feedback</div>
                             </div>
@@ -214,17 +217,7 @@
                                 <td>Otto</td>
                                 <td>@mdo</td>
                             </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td colspan="2">Larry the Bird</td>
-                                <td>@twitter</td>
-                            </tr>
+                           
                         </tbody>
                     </table>
                 </div><br><br><br>
