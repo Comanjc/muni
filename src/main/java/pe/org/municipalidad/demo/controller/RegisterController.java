@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class RegisterController {
     
     
-    @RequestMapping("/auth/main/formRegister")
+  /*  @RequestMapping("/auth/main/formRegister")
 
 
     @GetMapping
@@ -25,6 +25,6 @@ public class RegisterController {
     
     
     
-}
+}*/
     
 }

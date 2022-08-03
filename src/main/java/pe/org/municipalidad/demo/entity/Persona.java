@@ -36,9 +36,12 @@ public class Persona implements  Serializable{
     
     private String cargo;
     private String responsable;
+    private String ape_p;
+    private String ape_m;
     private String dni;
     private String fecha;
-    private String  sexo;
+    private String sexo;
+
  
     
     
